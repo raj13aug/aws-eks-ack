@@ -1,4 +1,6 @@
 ###############################
+#    Provider Block          #
+##############################
 provider "kubernetes" {
   config_path = "~/.kube/config"
 }
@@ -10,7 +12,8 @@ provider "helm" {
 }
 
 ################################
-
+#   Data Block                 #
+#################################
 data "aws_partition" "current" {}
 data "aws_caller_identity" "current" {}
 data "aws_region" "current" {}
@@ -43,7 +46,7 @@ locals {
 
 
 ################################################################################
-# S3
+#                                 ACK for S3 bucket                            #
 ################################################################################
 
 locals {
